@@ -367,6 +367,12 @@
     "tasks": {
         "deploy": [
             "increment-build",
+            "deploy-app-main"
+        ]
+    },
+    "tasks1": {
+        "deploy": [
+            "increment-build",
             "deploy-app-main",
             "deploy-app-mobile",
             "deploy-app-forms",
