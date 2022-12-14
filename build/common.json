@@ -1,14 +1,14 @@
 {
     "name": "common",
     "version": "7.2.1",
-    "build": 34,
+    "build": 39,
     "homepage": "http://www.onlyoffice.com",
     "private": true,
     "sdk": {
         "clean": [
             "../deploy/sdkjs"
         ],
-        "copy1": {
+        "copy": {
             "script": {
                 "files": [
                     {
@@ -17,7 +17,7 @@
                         "src": [
                             "Images/*",
                             "Images/placeholders/*",
-							"Images/content_controls/*",
+                            "Images/content_controls/*",
                             "Native/*.js",
                             "libfont/js/fonts.*",
                             "libfont/wasm/fonts.*"
@@ -259,7 +259,7 @@
         "clean": [
             "../deploy/web-apps/apps/common/embed"
         ],
-        "copy1": {
+        "copy": {
             "app-logo": {
                 "dest": "../deploy/web-apps/apps/common/embed/resources/img/logo.svg",
                 "src": "../apps/common/embed/resources/img/logo.svg"
@@ -271,7 +271,6 @@
             "increment-build",
             "deploy-api",
             "deploy-apps-common",
-            "deploy-sdk",
             "deploy-sockjs",
             "deploy-xregexp",
             "deploy-requirejs",
@@ -281,7 +280,12 @@
             "deploy-bootstrap",
             "deploy-iscroll",
             "deploy-fetch",
-            "deploy-es6-promise",
+            "deploy-es6-promise"
+        ]
+    },
+    "tasks1": {
+        "deploy": [
+            "deploy-sdk",
             "deploy-common-embed"
         ]
     }
