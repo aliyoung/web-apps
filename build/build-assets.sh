@@ -3,5 +3,5 @@
 grunt
 
 pushd ..
-rm -f deploy.zip && zip deploy.zip deploy
+rm -f deploy.tar && tar cf deploy.tar deploy
 popd
