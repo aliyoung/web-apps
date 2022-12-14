@@ -406,9 +406,9 @@ module.exports = function(grunt) {
                 localization: {
                     files: packageFile['main']['copy']['localization']
                 },
-                help: {
-                    files: packageFile['main']['copy']['help']
-                },
+                // help: {
+                //     files: packageFile['main']['copy']['help']
+                // },
                 indexhtml: {
                     files: packageFile['main']['copy']['indexhtml']
                 }
@@ -689,18 +689,18 @@ module.exports = function(grunt) {
                                                             'requirejs', 'terser', 'concat', 'copy', 'svgmin', 'inline', 'json-minify',
                                                             'replace:writeVersion', 'replace:prepareHelp', 'clean:postbuild']);
 
-    grunt.registerTask('deploy-app-mobile',             ['mobile-app-init', 'clean:deploy', /*'cssmin',*/ /*'copy:template-backup',*/
-                                                            'htmlmin', /*'requirejs',*/ 'exec:webpack_install', 'exec:webpack_app_build', /*'copy:template-restore',*/
-                                                            /*'clean:template-backup',*/ 'copy:localization', 'copy:index-page',
-                                                            'copy:images-app', 'copy:webpack-dist', 'concat', 'json-minify'/*,*/
-                                                            /*'replace:writeVersion', 'replace:fixResourceUrl'*/]);
+    // grunt.registerTask('deploy-app-mobile',             ['mobile-app-init', 'clean:deploy', /*'cssmin',*/ /*'copy:template-backup',*/
+    //                                                         'htmlmin', /*'requirejs',*/ 'exec:webpack_install', 'exec:webpack_app_build', /*'copy:template-restore',*/
+    //                                                         /*'clean:template-backup',*/ 'copy:localization', 'copy:index-page',
+    //                                                         'copy:images-app', 'copy:webpack-dist', 'concat', 'json-minify'/*,*/
+    //                                                         /*'replace:writeVersion', 'replace:fixResourceUrl'*/]);
 
-    grunt.registerTask('deploy-app-embed',              ['embed-app-init', 'clean:prebuild', 'terser', 'less', 'copy', 'clean:postbuild']);
+    // grunt.registerTask('deploy-app-embed',              ['embed-app-init', 'clean:prebuild', 'terser', 'less', 'copy', 'clean:postbuild']);
 
     doRegisterInitializeAppTask('common',               'Common',               'common.json');
     doRegisterInitializeAppTask('documenteditor',       'DocumentEditor',       'documenteditor.json');
-    doRegisterInitializeAppTask('spreadsheeteditor',    'SpreadsheetEditor',    'spreadsheeteditor.json');
-    doRegisterInitializeAppTask('presentationeditor',   'PresentationEditor',   'presentationeditor.json');
+    // doRegisterInitializeAppTask('spreadsheeteditor',    'SpreadsheetEditor',    'spreadsheeteditor.json');
+    // doRegisterInitializeAppTask('presentationeditor',   'PresentationEditor',   'presentationeditor.json');
 
 
     grunt.registerTask('deploy-app', 'Deploy application.', function(){
@@ -716,17 +716,18 @@ module.exports = function(grunt) {
 
     grunt.registerTask('deploy-common-component',             ['init-build-common', 'deploy-app']);
     grunt.registerTask('deploy-documenteditor-component',     ['init-build-documenteditor', 'deploy-app']);
-    grunt.registerTask('deploy-spreadsheeteditor-component',  ['init-build-spreadsheeteditor', 'deploy-app']);
-    grunt.registerTask('deploy-presentationeditor-component', ['init-build-presentationeditor', 'deploy-app']);
+    // grunt.registerTask('deploy-spreadsheeteditor-component',  ['init-build-spreadsheeteditor', 'deploy-app']);
+    // grunt.registerTask('deploy-presentationeditor-component', ['init-build-presentationeditor', 'deploy-app']);
     // This task is called from the Makefile, don't delete it.
     grunt.registerTask('deploy-documents-component',          ['deploy-common-component']);   
 
     grunt.registerTask('deploy-documenteditor',     ['deploy-common-component', 'deploy-documenteditor-component']);
-    grunt.registerTask('deploy-spreadsheeteditor',  ['deploy-common-component', 'deploy-spreadsheeteditor-component']);
-    grunt.registerTask('deploy-presentationeditor', ['deploy-common-component', 'deploy-presentationeditor-component']);
+    // grunt.registerTask('deploy-spreadsheeteditor',  ['deploy-common-component', 'deploy-spreadsheeteditor-component']);
+    // grunt.registerTask('deploy-presentationeditor', ['deploy-common-component', 'deploy-presentationeditor-component']);
 
     grunt.registerTask('default', ['deploy-common-component',
                                    'deploy-documenteditor-component',
-                                   'deploy-spreadsheeteditor-component',
-                                   'deploy-presentationeditor-component']);
+                                //    'deploy-spreadsheeteditor-component',
+                                //    'deploy-presentationeditor-component'
+                                ]);
 };
