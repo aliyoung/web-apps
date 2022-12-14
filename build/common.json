@@ -1,14 +1,14 @@
 {
     "name": "common",
-    "version": "4.3.0",
-    "build": 39,
+    "version": "7.2.1",
+    "build": 34,
     "homepage": "http://www.onlyoffice.com",
     "private": true,
     "sdk": {
         "clean": [
             "../deploy/sdkjs"
         ],
-        "copy": {
+        "copy1": {
             "script": {
                 "files": [
                     {
@@ -259,7 +259,7 @@
         "clean": [
             "../deploy/web-apps/apps/common/embed"
         ],
-        "copy": {
+        "copy1": {
             "app-logo": {
                 "dest": "../deploy/web-apps/apps/common/embed/resources/img/logo.svg",
                 "src": "../apps/common/embed/resources/img/logo.svg"
