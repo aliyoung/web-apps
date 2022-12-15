@@ -192,9 +192,9 @@ define([
                     allowMouseEventsOnDisabled: true
                 });
                 this._settings[Common.Utils.documentSettingsType.MailMerge]   = {panel: "id-mail-merge-settings",      btn: this.btnMailMerge};
-                this.btnMailMerge.setElement($markup.findById('#id-right-menu-mail-merge'), false); this.btnMailMerge.render().setVisible(true);
-                this.btnMailMerge.on('click', this.onBtnMenuClick.bind(this));
-                this.mergeSettings = new DE.Views.MailMergeSettings();
+                // this.btnMailMerge.setElement($markup.findById('#id-right-menu-mail-merge'), false); this.btnMailMerge.render().setVisible(true);
+                // this.btnMailMerge.on('click', this.onBtnMenuClick.bind(this));
+                // this.mergeSettings = new DE.Views.MailMergeSettings();
             }
 
             if (mode && mode.isSignatureSupport) {

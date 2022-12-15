@@ -79,11 +79,11 @@
                 <div class="group small">
                     <div class="elset">
                         <span class="btn-slot split" id="slot-btn-clearstyle"></span>
-                        <span class="btn-slot split" id="slot-btn-colorschemas"></span>
+                        <span class="btn-slot split hidden" id="slot-btn-colorschemas"></span>
                     </div>
                     <div class="elset">
                         <span class="btn-slot split" id="slot-btn-copystyle"></span>
-                        <span class="btn-slot" id="slot-btn-mailrecepients" data-layout-name="toolbar-home-mailmerge"></span>
+                        <span class="btn-slot hidden" id="slot-btn-mailrecepients" data-layout-name="toolbar-home-mailmerge"></span>
                     </div>
                 </div>
                 <div class="separator long invisible"></div>
@@ -102,16 +102,16 @@
                 <div class="group">
                     <span class="btn-slot text x-huge" id="slot-btn-insimage"></span>
                     <span class="btn-slot text x-huge" id="slot-btn-inschart"></span>
-                    <span class="btn-slot text x-huge" id="slot-btn-insshape"></span>
+                    <span class="btn-slot text x-huge hidden" id="slot-btn-insshape"></span>
                 </div>
-                <div class="separator long"></div>
-                <div class="group">
+                <div class="separator long hidden"></div>
+                <div class="group hidden">
                     <span class="btn-slot text x-huge slot-comment"></span>
                     <span class="btn-slot text x-huge slot-inshyperlink"></span>
                 </div>
                 <div class="separator long"></div>
                 <div class="group">
-                    <span class="btn-slot text x-huge" id="slot-btn-editheader"></span>
+                    <span class="btn-slot text x-huge hidden" id="slot-btn-editheader"></span>
                     <span class="btn-slot text x-huge" id="slot-btn-datetime"></span>
                 </div>
                 <div class="separator long"></div>
@@ -128,8 +128,8 @@
                 <div class="group">
                     <span class="btn-slot text x-huge" id="slot-btn-dropcap"></span>
                 </div>
-                <div class="separator long"></div>
-                <div class="group">
+                <div class="separator long hidden"></div>
+                <div class="group hidden">
                     <span class="btn-slot text x-huge" id="slot-btn-controls"></span>
                 </div>
             </section>
@@ -150,8 +150,8 @@
                     <span class="btn-slot text x-huge" id="slot-img-align"></span>
                     <span class="btn-slot text x-huge" id="slot-img-group"></span>
                 </div>
-                <div class="separator long"></div>
-                <div class="group">
+                <div class="separator long hidden"></div>
+                <div class="group hidden">
                     <span class="btn-slot text x-huge" id="slot-btn-watermark"></span>
                 </div>
             </section>

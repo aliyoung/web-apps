@@ -77,7 +77,7 @@ define([
                                 //'<label id="rib-doc-name" />' +
                                 '<input id="rib-doc-name" autofill="off" autocomplete="off"/></input>' +
                             '</section>' +
-                            '<section style="display: inherit;">' +
+                            '<section class="hidden" style="display: inherit;">' +
                                 '<div class="hedset">' +
                                     '<div class="btn-slot" id="slot-hbtn-edit"></div>' +
                                     '<div class="btn-slot" id="slot-hbtn-print"></div>' +
@@ -112,7 +112,7 @@ define([
                                     '<button type="button" class="btn btn-header slot-btn-user-name hidden">' +
                                         '<div class="color-user-name"></div>' +
                                     '</button>' +
-                                    '<div class="btn-current-user hidden">' +
+                                    '<div class="btn-current-user">' +
                                         '<div class="color-user-name"></div>' +
                                     '</div>' +
                                 '</div>' +
@@ -124,10 +124,10 @@ define([
                             '</section>';
 
         var templateTitleBox = '<section id="box-document-title">' +
-                                '<div class="extra"></div>' +
+                                '<div class="extra hidden"></div>' +
                                 '<div class="hedset">' +
-                                    '<div class="btn-slot" id="slot-btn-dt-save" data-layout-name="header-save"></div>' +
-                                    '<div class="btn-slot" id="slot-btn-dt-print"></div>' +
+                                    '<div class="btn-slot hidden" id="slot-btn-dt-save" data-layout-name="header-save"></div>' +
+                                    '<div class="btn-slot hidden" id="slot-btn-dt-print"></div>' +
                                     '<div class="btn-slot" id="slot-btn-dt-undo"></div>' +
                                     '<div class="btn-slot" id="slot-btn-dt-redo"></div>' +
                                 '</div>' +
