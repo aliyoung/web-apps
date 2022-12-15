@@ -3177,7 +3177,8 @@ define([
 
             me.toolbar.render(_.extend({isCompactView: compactview}, config));
 
-            // var tab = {action: 'review', caption: me.toolbar.textTabCollaboration, dataHintTitle: 'U', layoutname: 'toolbar-collaboration'};
+            var tab;
+            // tab = {action: 'review', caption: me.toolbar.textTabCollaboration, dataHintTitle: 'U', layoutname: 'toolbar-collaboration'};
             // var $panel = me.application.getController('Common.Controllers.ReviewChanges').createToolbarPanel();
             // if ( $panel ) {
             //     me.toolbar.addTab(tab, $panel, 5);

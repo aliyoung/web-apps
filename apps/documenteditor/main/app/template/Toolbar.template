@@ -101,8 +101,8 @@
                 <div class="separator long"></div>
                 <div class="group">
                     <span class="btn-slot text x-huge" id="slot-btn-insimage"></span>
-                    <span class="btn-slot text x-huge" id="slot-btn-inschart"></span>
-                    <span class="btn-slot text x-huge hidden" id="slot-btn-insshape"></span>
+                    <span class="btn-slot text x-huge hidden" id="slot-btn-inschart"></span>
+                    <span class="btn-slot text x-huge" id="slot-btn-insshape"></span>
                 </div>
                 <div class="separator long hidden"></div>
                 <div class="group hidden">
