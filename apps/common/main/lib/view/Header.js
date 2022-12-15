@@ -140,8 +140,8 @@ define([
                                     '<button type="button" class="btn btn-header slot-btn-user-name hidden">' +
                                         '<div class="color-user-name"></div>' +
                                     '</button>' +
-                                    '<div class="btn-current-user hidden">' +
-                                        '<div class="color-user-name"></div>' +
+                                    '<div class="btn-current-user disabled">' +
+                                        '<div class="color-user-name hidden"></div>' +
                                     '</div>' +
                                 '</div>' +
                             '</section>';
