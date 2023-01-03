@@ -524,9 +524,19 @@ define([
                 }
             },
 
-            onGetDocumentData: function(data) {
+            onSaveDocumentData: function(options) {
                 var data = this.api.get_DocumentData();
-                Common.Gateway.sendDocumentData(data);
+                this.api.saveDocumentToRemote(options.url, data, function(httpRequest, statusText, status) {
+                    Common.Gateway.saveDocumentDataResult({status: status});
+                }, function(httpRequest) {
+                    var result
+                    try {
+                        result = JSON.parse(httpRequest.responseText);
+                    } catch (error) {
+                        result = {status: 'ok', data: httpRequest.responseText};
+                    }
+                    Common.Gateway.saveDocumentDataResult(result);
+                });
             },
 
             onProcessSaveResult: function(data) {
@@ -1340,7 +1350,7 @@ define([
                     Common.component.Analytics.initialize('UA-12442749-13', 'Document Editor');
 
                 Common.Gateway.on('applyeditrights',        _.bind(me.onApplyEditRights, me));
-                Common.Gateway.on('getDocumentData',        _.bind(me.onGetDocumentData, me));
+                Common.Gateway.on('saveDocumentData',       _.bind(me.onSaveDocumentData, me));
                 Common.Gateway.on('processsaveresult',      _.bind(me.onProcessSaveResult, me));
                 Common.Gateway.on('processrightschange',    _.bind(me.onProcessRightsChange, me));
                 Common.Gateway.on('processmouse',           _.bind(me.onProcessMouse, me));

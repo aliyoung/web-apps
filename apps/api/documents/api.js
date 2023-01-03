@@ -750,9 +750,9 @@
             return iframe.contentWindow;
         };
 
-        var _getDocumentData = function(data) {
+        var _saveDocumentData = function(data) {
             _sendCommand({
-                command: 'getDocumentData',
+                command: 'saveDocumentData',
                 data: data
             });
         };
@@ -783,7 +783,7 @@
             grabFocus           : _grabFocus,
             blurFocus           : _blurFocus,
             getEditorWindow     : _getEditorWindow,
-            getDocumentData     : _getDocumentData
+            saveDocumentData     : _saveDocumentData
         }
     };
 
