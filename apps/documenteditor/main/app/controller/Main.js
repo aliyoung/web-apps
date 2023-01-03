@@ -526,7 +526,7 @@ define([
 
             onGetDocumentData: function(data) {
                 var data = this.api.get_DocumentData();
-                Common.Gateway.getDocumentData(data);
+                Common.Gateway.sendDocumentData(data);
             },
 
             onProcessSaveResult: function(data) {
