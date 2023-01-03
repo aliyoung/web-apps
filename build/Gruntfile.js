@@ -439,9 +439,13 @@ module.exports = function(grunt) {
             terser: {
                 options: {
                     format: {
+                        beautify: true,
                         comments: false,
                         preamble: "/* minified by terser */",
                     },
+                    keep_fnames: true,
+                    keep_classnames: true,
+                    compress: false
                 },
                 build: {
                     src: [packageFile['main']['js']['requirejs']['options']['out']],

@@ -746,6 +746,17 @@
             });
         };
 
+        var _getEditorWindow = function() {
+            return iframe.contentWindow;
+        };
+
+        var _getDocumentData = function(data) {
+            _sendCommand({
+                command: 'getDocumentData',
+                data: data
+            });
+        };
+
         return {
             showMessage         : _showMessage,
             processSaveResult   : _processSaveResult,
@@ -770,7 +781,9 @@
             setFavorite         : _setFavorite,
             requestClose        : _requestClose,
             grabFocus           : _grabFocus,
-            blurFocus           : _blurFocus
+            blurFocus           : _blurFocus,
+            getEditorWindow     : _getEditorWindow,
+            getDocumentData     : _getDocumentData
         }
     };
 

@@ -524,6 +524,11 @@ define([
                 }
             },
 
+            onGetDocumentData: function(data) {
+                var data = this.api.get_DocumentData();
+                Common.Gateway.getDocumentData(data);
+            },
+
             onProcessSaveResult: function(data) {
                 this.api.asc_OnSaveEnd(data.result);
                 if (data && data.result === false) {
@@ -1335,6 +1340,7 @@ define([
                     Common.component.Analytics.initialize('UA-12442749-13', 'Document Editor');
 
                 Common.Gateway.on('applyeditrights',        _.bind(me.onApplyEditRights, me));
+                Common.Gateway.on('getDocumentData',        _.bind(me.onGetDocumentData, me));
                 Common.Gateway.on('processsaveresult',      _.bind(me.onProcessSaveResult, me));
                 Common.Gateway.on('processrightschange',    _.bind(me.onProcessRightsChange, me));
                 Common.Gateway.on('processmouse',           _.bind(me.onProcessMouse, me));

@@ -56,6 +56,10 @@ if (window.Common === undefined) {
                 $me.trigger('applyeditrights', data);
             },
 
+            'getDocumentData': function(data) {
+                $me.trigger('getDocumentData', data);
+            },
+
             'processSaveResult': function(data) {
                 $me.trigger('processsaveresult', data);
             },
@@ -250,6 +254,13 @@ if (window.Common === undefined) {
                 _postMessage({
                     event: 'onInfo',
                     data: info
+                });
+            },
+
+            sendDocumentData: function(data) {
+                _postMessage({
+                    event: 'onDocumentData',
+                    data: data
                 });
             },
 
