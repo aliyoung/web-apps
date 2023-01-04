@@ -3235,14 +3235,14 @@ define([
             }
             config.isEdit && config.canFeatureContentControl && me.onChangeSdtGlobalSettings();
 
-            tab = {caption: me.toolbar.textTabView, action: 'view', extcls: config.isEdit ? 'canedit' : '', layoutname: 'toolbar-view', dataHintTitle: 'W'};
-            var viewtab = me.getApplication().getController('ViewTab');
-            viewtab.setApi(me.api).setConfig({toolbar: me, mode: config});
-            $panel = viewtab.createToolbarPanel();
-            if ($panel) {
-                me.toolbar.addTab(tab, $panel, 7);
-                me.toolbar.setVisible('view', Common.UI.LayoutManager.isElementVisible('toolbar-view'));
-            }
+            // tab = {caption: me.toolbar.textTabView, action: 'view', extcls: config.isEdit ? 'canedit' : '', layoutname: 'toolbar-view', dataHintTitle: 'W'};
+            // var viewtab = me.getApplication().getController('ViewTab');
+            // viewtab.setApi(me.api).setConfig({toolbar: me, mode: config});
+            // $panel = viewtab.createToolbarPanel();
+            // if ($panel) {
+            //     me.toolbar.addTab(tab, $panel, 7);
+            //     me.toolbar.setVisible('view', Common.UI.LayoutManager.isElementVisible('toolbar-view'));
+            // }
         },
 
         onAppReady: function (config) {
