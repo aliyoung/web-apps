@@ -526,7 +526,7 @@ define([
 
             onSaveDocumentData: function(options) {
                 var data = this.api.get_DocumentData();
-                this.api.saveDocumentToRemote(options.url, data, function(httpRequest, statusText, status) {
+                this.api.save_DocumentData(options.url, data, function(httpRequest, statusText, status) {
                     Common.Gateway.saveDocumentDataResult({status: status});
                 }, function(httpRequest) {
                     var result
