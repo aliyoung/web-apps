@@ -647,13 +647,13 @@ define([
                         lock: [_set.paragraphLock, _set.headerLock, _set.inEquation, _set.controlPlain, _set.richDelLock, _set.plainDelLock,  _set.contentLock,  _set.cantAddImagePara,
                                 _set.previewReviewMode, _set.viewFormMode, _set.lostConnect, _set.disableOnStart],
                         caption: me.capBtnInsImage,
-                        menu: new Common.UI.Menu({
-                            items: [
-                                {caption: this.mniImageFromFile, value: 'file'},
-                                {caption: this.mniImageFromUrl, value: 'url'},
-                                {caption: this.mniImageFromStorage, value: 'storage'}
-                            ]
-                        }),
+                        // menu: new Common.UI.Menu({
+                        //     items: [
+                        //         {caption: this.mniImageFromFile, value: 'file'},
+                        //         {caption: this.mniImageFromUrl, value: 'url'},
+                        //         {caption: this.mniImageFromStorage, value: 'storage'}
+                        //     ]
+                        // }),
                         dataHint: '1',
                         dataHintDirection: 'bottom',
                         dataHintOffset: 'small'
@@ -2469,7 +2469,7 @@ define([
                 this.btnMailRecepients.setVisible(mode.canCoAuthoring == true && mode.canUseMailMerge);
                 this.listStylesAdditionalMenuItem.setVisible(mode.canEditStyles);
                 this.btnContentControls.menu.items[10].setVisible(mode.canEditContentControl);
-                this.mnuInsertImage.items[2].setVisible(this.mode.canRequestInsertImage || this.mode.fileChoiceUrl && this.mode.fileChoiceUrl.indexOf("{documentType}")>-1);
+                // this.mnuInsertImage.items[2].setVisible(this.mode.canRequestInsertImage || this.mode.fileChoiceUrl && this.mode.fileChoiceUrl.indexOf("{documentType}")>-1);
             },
 
             onSendThemeColorSchemes: function (schemas) {

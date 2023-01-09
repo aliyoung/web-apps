@@ -334,6 +334,7 @@ define([
             toolbar.mnuInsertTable.on('item:click',                     _.bind(this.onInsertTableClick, this));
             toolbar.mnuInsertTable.on('show:after',                _.bind(this.onInsertTableShow, this));
             toolbar.mnuInsertImage.on('item:click',                     _.bind(this.onInsertImageClick, this));
+            toolbar.btnInsertImage.on('click',                          _.bind(this.onInsertImageClick, this));
             toolbar.btnInsertText.on('click',                           _.bind(this.onBtnInsertTextClick, this));
             toolbar.btnInsertShape.menu.on('hide:after',                _.bind(this.onInsertShapeHide, this));
             toolbar.btnDropCap.menu.on('item:click',                    _.bind(this.onDropCapSelect, this));
@@ -1605,6 +1606,14 @@ define([
                 })).show();
             } else if (item.value === 'storage') {
                 Common.NotificationCenter.trigger('storage:image-load', 'add');
+            } else {
+                this.toolbar.fireEvent('insertimage', this.toolbar);
+
+                if (this.api)
+                    setTimeout(function() {me.api.asc_addImage();}, 1);
+
+                Common.NotificationCenter.trigger('edit:complete', me.toolbar);
+                Common.component.Analytics.trackEvent('ToolBar', 'Image');
             }
         },
 
