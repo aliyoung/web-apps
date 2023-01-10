@@ -300,22 +300,23 @@ define([
                 cls: 'btn-text-menu-default',
                 caption: this.textInsert,
                 style: "width:100%;",
-                menu: new Common.UI.Menu({
-                    style: 'min-width: 194px;',
-                    maxHeight: 200,
-                    items: [
-                        {caption: this.textFromFile, value: 0},
-                        {caption: this.textFromUrl, value: 1},
-                        {caption: this.textFromStorage, value: 2}
-                    ]
-                }),
+                // menu: new Common.UI.Menu({
+                //     style: 'min-width: 194px;',
+                //     maxHeight: 200,
+                //     items: [
+                //         {caption: this.textFromFile, value: 0},
+                //         {caption: this.textFromUrl, value: 1},
+                //         {caption: this.textFromStorage, value: 2}
+                //     ]
+                // }),
                 dataHint: '1',
                 dataHintDirection: 'bottom',
                 dataHintOffset: 'big'
             });
             this.lockedControls.push(this.btnSelectImage);
-            this.btnSelectImage.menu.on('item:click', _.bind(this.onImageSelect, this));
-            this.btnSelectImage.menu.items[2].setVisible(this.mode.canRequestInsertImage || this.mode.fileChoiceUrl && this.mode.fileChoiceUrl.indexOf("{documentType}")>-1);
+            this.btnSelectImage.on('click', _.bind(this.onImageSelect, this));
+            // this.btnSelectImage.menu.on('item:click', _.bind(this.onImageSelect, this));
+            // this.btnSelectImage.menu.items[2].setVisible(this.mode.canRequestInsertImage || this.mode.fileChoiceUrl && this.mode.fileChoiceUrl.indexOf("{documentType}")>-1);
 
             this.linkAdvanced = $('#image-advanced-link');
             $(this.el).on('click', '#image-advanced-link', _.bind(this.openAdvancedSettings, this));
