@@ -114,8 +114,8 @@
                     <span class="btn-slot text x-huge hidden" id="slot-btn-editheader"></span>
                     <span class="btn-slot text x-huge" id="slot-btn-datetime"></span>
                 </div>
-                <div class="separator long"></div>
-                <div class="group">
+                <div class="separator long hidden"></div>
+                <div class="group hidden">
                     <span class="btn-slot text x-huge" id="slot-btn-instext"></span>
                     <span class="btn-slot text x-huge" id="slot-btn-instextart"></span>
                 </div>
