@@ -458,16 +458,16 @@ define([
             });
 
             me.menuImgReplace = new Common.UI.MenuItem({
-                caption     : me.textReplace,
-                menu        : new Common.UI.Menu({
-                    cls: 'shifted-right',
-                    menuAlign: 'tl-tr',
-                    items: [
-                        new Common.UI.MenuItem({caption: this.textFromFile, value: 0}),
-                        new Common.UI.MenuItem({caption: this.textFromUrl,  value: 1}),
-                        new Common.UI.MenuItem({caption: this.textFromStorage, value: 2})
-                    ]
-                })
+                caption     : me.textReplace
+                // menu        : new Common.UI.Menu({
+                //     cls: 'shifted-right',
+                //     menuAlign: 'tl-tr',
+                //     items: [
+                //         new Common.UI.MenuItem({caption: this.textFromFile, value: 0}),
+                //         new Common.UI.MenuItem({caption: this.textFromUrl,  value: 1}),
+                //         new Common.UI.MenuItem({caption: this.textFromStorage, value: 2})
+                //     ]
+                // })
             });
 
             me.menuImgCopy = new Common.UI.MenuItem({
@@ -682,7 +682,7 @@ define([
                     me.menuImgReplace.setVisible(value.imgProps.isOnlyImg && (pluginGuid===null || pluginGuid===undefined));
                     if (me.menuImgReplace.isVisible())
                         me.menuImgReplace.setDisabled(islocked || pluginGuid===null);
-                    me.menuImgReplace.menu.items[2].setVisible(me.mode.canRequestInsertImage || me.mode.fileChoiceUrl && me.mode.fileChoiceUrl.indexOf("{documentType}")>-1);
+                    // me.menuImgReplace.menu.items[2].setVisible(me.mode.canRequestInsertImage || me.mode.fileChoiceUrl && me.mode.fileChoiceUrl.indexOf("{documentType}")>-1);
 
                     me.menuImgRotate.setVisible(!value.imgProps.isChart && (pluginGuid===null || pluginGuid===undefined));
                     if (me.menuImgRotate.isVisible()) {

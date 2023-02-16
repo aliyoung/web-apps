@@ -399,7 +399,8 @@ define([
             view.menuImageWrap.menu.on('item:click', _.bind(me.onImgWrap, me));
             view.menuImageAdvanced.on('click', _.bind(me.onImgAdvanced, me));
             view.menuOriginalSize.on('click', _.bind(me.onImgOriginalSize, me));
-            view.menuImgReplace.menu.on('item:click', _.bind(me.onImgReplace, me));
+            // view.menuImgReplace.menu.on('item:click', _.bind(me.onImgReplace, me));
+            view.menuImgReplace.on('click', _.bind(me.onImgReplace, me));
             view.menuImgEditPoints.on('click', _.bind(me.onImgEditPoints, me));
             view.mnuTableMerge.on('click', _.bind(me.onTableMerge, me));
             view.mnuTableSplit.on('click', _.bind(me.onTableSplit, me));
